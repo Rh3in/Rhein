@@ -94,44 +94,6 @@ main,
   z-index: 1;
 }
 
-main::before,
-main::after {
-  content: "";
-  position: fixed;
-  top: 47vh;
-  z-index: -1;
-  width: min(420px, 30vw);
-  height: 230px;
-  pointer-events: none;
-  opacity: 0.58;
-  background:
-    radial-gradient(ellipse at center, rgba(154, 76, 232, 0.36), transparent 58%),
-    linear-gradient(rgba(196, 226, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(196, 226, 255, 0.05) 1px, transparent 1px);
-  background-size:
-    auto,
-    22px 22px,
-    22px 22px;
-  filter: blur(0.2px);
-  mask-image: linear-gradient(90deg, transparent, #000 22%, #000 68%, transparent);
-}
-
-main::before {
-  left: -110px;
-}
-
-main::after {
-  right: -110px;
-  background:
-    radial-gradient(ellipse at center, rgba(225, 145, 48, 0.36), transparent 58%),
-    linear-gradient(rgba(196, 226, 255, 0.052) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(196, 226, 255, 0.046) 1px, transparent 1px);
-  background-size:
-    auto,
-    22px 22px,
-    22px 22px;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -400,42 +362,55 @@ button {
   text-align: left;
 }
 
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
 .hero::before {
-  content: none;
+  content: "";
   position: absolute;
-  left: 50%;
-  top: 142px;
-  z-index: -2;
-  width: min(1580px, 148vw);
-  height: 760px;
-  border-radius: 50% 50% 0 0 / 58% 58% 0 0;
-  border-top: 2px solid rgba(229, 239, 255, 0.84);
+  left: -54px;
+  top: 16%;
+  z-index: 0;
+  width: 54px;
+  height: 58%;
+  border-right: 1px solid rgba(190, 130, 255, 0.48);
   background:
-    radial-gradient(circle at 50% 74%, rgba(61, 112, 255, 0.74) 0%, rgba(35, 76, 206, 0.18) 19%, transparent 32%),
-    radial-gradient(ellipse at 50% 20%, rgba(58, 78, 214, 0.42), rgba(8, 13, 46, 0.82) 42%, rgba(3, 5, 13, 0.96) 76%),
-    #03050a;
+    radial-gradient(ellipse at 50% 50%, rgba(155, 73, 233, 0.46), rgba(110, 48, 188, 0.16) 38%, transparent 74%),
+    linear-gradient(90deg, rgba(196, 226, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(196, 226, 255, 0.05) 1px, transparent 1px);
+  background-size:
+    auto,
+    22px 22px,
+    22px 22px;
   box-shadow:
-    inset 0 26px 54px rgba(88, 116, 255, 0.32),
-    inset 0 -120px 150px rgba(3, 5, 10, 0.98),
-    0 -8px 44px rgba(91, 125, 255, 0.36),
-    0 22px 120px rgba(26, 74, 255, 0.32);
-  transform: translateX(-50%);
+    inset -12px 0 0 rgba(181, 103, 255, 0.08),
+    8px 0 32px rgba(131, 66, 225, 0.18);
+  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
 }
 
 .hero::after {
-  content: none;
+  content: "";
   position: absolute;
-  left: 50%;
-  top: 500px;
-  z-index: -1;
-  width: 300px;
-  height: 86px;
+  right: -54px;
+  top: 16%;
+  z-index: 0;
+  width: 54px;
+  height: 58%;
+  border-left: 1px solid rgba(245, 183, 84, 0.5);
   background:
-    radial-gradient(circle, rgba(218, 229, 255, 0.86) 0 2px, transparent 3px) 0 0 / 34px 24px,
-    radial-gradient(circle, rgba(17, 197, 232, 0.56) 0 1px, transparent 3px) 14px 10px / 42px 30px;
-  opacity: 0.5;
-  transform: translateX(-50%);
-  mask-image: radial-gradient(ellipse at center, #000 0%, transparent 72%);
+    radial-gradient(ellipse at 50% 50%, rgba(230, 151, 45, 0.44), rgba(169, 91, 31, 0.14) 38%, transparent 74%),
+    linear-gradient(90deg, rgba(196, 226, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(196, 226, 255, 0.05) 1px, transparent 1px);
+  background-size:
+    auto,
+    22px 22px,
+    22px 22px;
+  box-shadow:
+    inset 12px 0 0 rgba(245, 183, 84, 0.08),
+    -8px 0 32px rgba(220, 133, 42, 0.16);
+  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
 }
 
 .hero-copy {
@@ -1661,24 +1636,9 @@ pre {
     padding: 42px 0 58px;
   }
 
-  .hero::before {
-    top: 126px;
-    width: 148vw;
-    height: 610px;
-  }
-
+  .hero::before,
   .hero::after {
-    top: 430px;
-  }
-
-  .hero-panel .console-map,
-  .hero-panel .telemetry-list {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-panel .mini-grid {
-    grid-column: auto;
-    grid-row: auto;
+    content: none;
   }
 
   .availability {
