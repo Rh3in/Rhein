@@ -373,12 +373,13 @@ button {
   left: calc(50% - 50vw);
   top: 11%;
   z-index: 0;
-  width: 34px;
+  width: clamp(84px, 9vw, 150px);
   height: 70%;
   pointer-events: none;
-  border-right: 1px solid rgba(190, 130, 255, 0.48);
+  border-left: 1px solid rgba(190, 130, 255, 0.58);
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(155, 73, 233, 0.46), rgba(110, 48, 188, 0.16) 38%, transparent 74%),
+    radial-gradient(ellipse at 0% 50%, rgba(155, 73, 233, 0.52), rgba(110, 48, 188, 0.2) 38%, transparent 74%),
+    linear-gradient(90deg, rgba(169, 86, 244, 0.2), transparent 72%),
     linear-gradient(90deg, rgba(196, 226, 255, 0.03) 1px, transparent 1px),
     linear-gradient(0deg, rgba(196, 226, 255, 0.05) 1px, transparent 1px);
   background-size:
@@ -386,9 +387,12 @@ button {
     22px 22px,
     22px 22px;
   box-shadow:
-    inset -12px 0 0 rgba(181, 103, 255, 0.08),
-    8px 0 32px rgba(131, 66, 225, 0.18);
-  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+    inset 10px 0 0 rgba(181, 103, 255, 0.12),
+    18px 0 38px rgba(131, 66, 225, 0.22);
+  mask-image:
+    linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent),
+    linear-gradient(90deg, #000 0%, #000 44%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .hero::after {
@@ -397,12 +401,13 @@ button {
   right: calc(50% - 50vw);
   top: 11%;
   z-index: 0;
-  width: 34px;
+  width: clamp(84px, 9vw, 150px);
   height: 70%;
   pointer-events: none;
-  border-left: 1px solid rgba(245, 183, 84, 0.5);
+  border-right: 1px solid rgba(245, 183, 84, 0.6);
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(230, 151, 45, 0.44), rgba(169, 91, 31, 0.14) 38%, transparent 74%),
+    radial-gradient(ellipse at 100% 50%, rgba(230, 151, 45, 0.5), rgba(169, 91, 31, 0.18) 38%, transparent 74%),
+    linear-gradient(270deg, rgba(245, 178, 65, 0.2), transparent 72%),
     linear-gradient(90deg, rgba(196, 226, 255, 0.03) 1px, transparent 1px),
     linear-gradient(0deg, rgba(196, 226, 255, 0.05) 1px, transparent 1px);
   background-size:
@@ -410,9 +415,12 @@ button {
     22px 22px,
     22px 22px;
   box-shadow:
-    inset 12px 0 0 rgba(245, 183, 84, 0.08),
-    -8px 0 32px rgba(220, 133, 42, 0.16);
-  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+    inset -10px 0 0 rgba(245, 183, 84, 0.12),
+    -18px 0 38px rgba(220, 133, 42, 0.2);
+  mask-image:
+    linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent),
+    linear-gradient(270deg, #000 0%, #000 44%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .hero-copy {
