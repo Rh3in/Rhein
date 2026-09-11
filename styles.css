@@ -370,11 +370,12 @@ button {
 .hero::before {
   content: "";
   position: absolute;
-  left: -54px;
-  top: 16%;
+  left: calc(50% - 50vw);
+  top: 11%;
   z-index: 0;
-  width: 54px;
-  height: 58%;
+  width: 34px;
+  height: 70%;
+  pointer-events: none;
   border-right: 1px solid rgba(190, 130, 255, 0.48);
   background:
     radial-gradient(ellipse at 50% 50%, rgba(155, 73, 233, 0.46), rgba(110, 48, 188, 0.16) 38%, transparent 74%),
@@ -393,11 +394,12 @@ button {
 .hero::after {
   content: "";
   position: absolute;
-  right: -54px;
-  top: 16%;
+  right: calc(50% - 50vw);
+  top: 11%;
   z-index: 0;
-  width: 54px;
-  height: 58%;
+  width: 34px;
+  height: 70%;
+  pointer-events: none;
   border-left: 1px solid rgba(245, 183, 84, 0.5);
   background:
     radial-gradient(ellipse at 50% 50%, rgba(230, 151, 45, 0.44), rgba(169, 91, 31, 0.14) 38%, transparent 74%),
