@@ -385,6 +385,7 @@ button {
     18px 0 46px rgba(130, 72, 220, 0.14);
   opacity: 0.86;
   mask-image: linear-gradient(180deg, transparent, #000 16%, #000 84%, transparent);
+  transition: opacity 180ms ease;
 }
 
 .hero::after {
@@ -405,6 +406,12 @@ button {
     -18px 0 46px rgba(219, 139, 46, 0.13);
   opacity: 0.86;
   mask-image: linear-gradient(180deg, transparent, #000 16%, #000 84%, transparent);
+  transition: opacity 180ms ease;
+}
+
+.hero.hide-edge-lights::before,
+.hero.hide-edge-lights::after {
+  opacity: 0;
 }
 
 .hero-copy {

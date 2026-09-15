@@ -3,9 +3,17 @@ const navLinks = [...document.querySelectorAll("[data-nav-links] a")];
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const caseCards = [...document.querySelectorAll("[data-tags]")];
 const copyEmailButton = document.querySelector("[data-copy-email]");
+const hero = document.querySelector(".hero");
 
 const updateHeader = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
+};
+
+const updateHeroEdgeLights = () => {
+  if (!hero) return;
+
+  const rect = hero.getBoundingClientRect();
+  hero.classList.toggle("hide-edge-lights", rect.bottom < window.innerHeight * 0.45);
 };
 
 const setActiveNavLink = () => {
@@ -47,8 +55,10 @@ copyEmailButton?.addEventListener("click", async () => {
 
 window.addEventListener("scroll", () => {
   updateHeader();
+  updateHeroEdgeLights();
   setActiveNavLink();
 });
 
 updateHeader();
+updateHeroEdgeLights();
 setActiveNavLink();
