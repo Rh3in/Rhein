@@ -1191,8 +1191,8 @@ h3 {
 }
 
 .case-card:nth-child(2) {
-  --card-accent: #00d69d;
-  --card-accent-2: #11c5e8;
+  --card-accent: #8d7cff;
+  --card-accent-2: #10d4ff;
 }
 
 .case-card:nth-child(3) {
