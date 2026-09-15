@@ -182,7 +182,7 @@ button {
   bottom: 26px;
   left: 50%;
   width: 1px;
-  background: linear-gradient(transparent, rgba(17, 197, 232, 0.58), transparent);
+  background: linear-gradient(transparent, rgba(128, 82, 190, 0.28), transparent);
 }
 
 .signal-rail span {
@@ -369,12 +369,12 @@ button {
 
 .hero::before {
   content: "";
-  position: fixed;
-  left: 0;
-  top: 150px;
+  position: absolute;
+  left: calc(50% - 50vw);
+  top: 10%;
   z-index: 0;
   width: clamp(120px, 12vw, 210px);
-  height: calc(100vh - 220px);
+  height: 72%;
   pointer-events: none;
   background:
     linear-gradient(90deg, rgba(190, 130, 255, 0.62) 0 1px, transparent 1px),
@@ -389,12 +389,12 @@ button {
 
 .hero::after {
   content: "";
-  position: fixed;
-  right: 0;
-  top: 150px;
+  position: absolute;
+  right: calc(50% - 50vw);
+  top: 10%;
   z-index: 0;
   width: clamp(120px, 12vw, 210px);
-  height: calc(100vh - 220px);
+  height: 72%;
   pointer-events: none;
   background:
     linear-gradient(270deg, rgba(245, 183, 84, 0.62) 0 1px, transparent 1px),
