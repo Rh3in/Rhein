@@ -369,9 +369,9 @@ button {
 
 .hero::before {
   content: "";
-  position: absolute;
-  left: calc(50% - 50vw);
-  top: 24px;
+  position: fixed;
+  left: 0;
+  top: 150px;
   z-index: 0;
   width: clamp(120px, 12vw, 210px);
   height: calc(100vh - 220px);
@@ -390,9 +390,9 @@ button {
 
 .hero::after {
   content: "";
-  position: absolute;
-  right: calc(50% - 50vw);
-  top: 24px;
+  position: fixed;
+  right: 0;
+  top: 150px;
   z-index: 0;
   width: clamp(120px, 12vw, 210px);
   height: calc(100vh - 220px);
