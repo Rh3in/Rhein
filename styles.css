@@ -1179,6 +1179,7 @@ h3 {
   --card-accent-2: var(--green);
   min-width: 0;
   overflow: hidden;
+  cursor: pointer;
   border-color: rgba(196, 226, 255, 0.16);
   background:
     radial-gradient(circle at 85% 0%, rgba(17, 197, 232, 0.1), transparent 34%),
@@ -1232,6 +1233,13 @@ h3 {
 
 .case-card.is-hidden {
   display: none;
+}
+
+.case-card-main-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
 }
 
 .case-card img {
@@ -1352,6 +1360,8 @@ h3 {
 }
 
 .case-card-actions {
+  position: relative;
+  z-index: 4;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
