@@ -835,32 +835,38 @@ h3 {
 
 .telemetry-list article {
   position: relative;
-  padding: 15px 0 13px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  column-gap: 13px;
+  padding: 14px 0 12px;
   border-bottom: 1px solid var(--line);
 }
 
 .telemetry-list strong {
   display: block;
   color: var(--text);
-  font-size: 1.38rem;
+  font-family: var(--mono);
+  font-size: 1.18rem;
   line-height: 1;
 }
 
 .telemetry-list span {
   display: block;
-  max-width: 72%;
-  margin-top: 6px;
+  max-width: none;
+  margin-top: 0;
+  padding-right: 82px;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
+  line-height: 1.68;
 }
 
 .telemetry-list em {
   position: absolute;
-  top: 17px;
+  top: 13px;
   right: 0;
-  color: var(--green);
+  color: color-mix(in srgb, var(--green) 76%, #ffffff);
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   font-style: normal;
 }
 
